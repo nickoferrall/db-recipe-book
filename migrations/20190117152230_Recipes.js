@@ -3,10 +3,9 @@ exports.up = function(knex, Promise) {
     tbl.increments('id');
     tbl
       .integer('recipe_id')
-      .references('ID')
-      .inTable('to_cook');
-    tbl.string('ingredients');
-    tbl.float('quantity');
+      .references('id')
+      .inTable('dishes');
+    tbl.string('recipe');
   });
 };
 
